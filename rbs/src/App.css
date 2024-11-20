@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body,html{
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .abstract-background {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    /* Background Styling */
+    background: radial-gradient(circle, rgba(80, 80, 80, 0.9) 0%, rgba(20, 20, 20, 1) 100%);
+    background-blend-mode: overlay;
+  
+    /* Adding abstract elements */
+    position: relative;
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .abstract-background::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.1) 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 50px 50px;
+    opacity: 0.05;
+    animation: rotate 10s linear infinite;
   }
+  
+  .abstract-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+    mix-blend-mode: screen;
+  }
+  
+  h1 {
+    color: #121212;
+    font-size: 3rem;
+    z-index: 1;
+    font-weight:bolder;
+    
+  }
+  
+  p {
+    color: #cccccc;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
+  
+  /* Animation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 }
+
+
+
+
+
