@@ -1,0 +1,33 @@
+.shadow-box-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding-left: 20px; /* Space for text */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text and image to the left */
+  background: linear-gradient(145deg, #2e2e2e, #444444);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.shadow-box-bar img {
+  height: 40px; /* Adjust the height of the image */
+  margin-right: 15px; /* Space between the image and text */
+  object-fit: contain;
+   /* Ensures the image fits inside its container */
+}
+
+.shadow-box-bar h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 3px;
+  transform: translateY(-1px);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), -2px -2px 6px rgba(255, 255, 255, 0.4);
+}
+
+  
